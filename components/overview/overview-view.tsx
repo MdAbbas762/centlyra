@@ -49,7 +49,7 @@ function OverviewContent() {
         <section className="relative flex min-w-0 flex-col gap-4 overflow-hidden rounded-3xl border border-seafoam/30 bg-seafoam-soft/50 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6" aria-label="Workspace introduction">
           <div className="relative z-10 flex min-w-0 items-start gap-3">
             <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-seafoam/25 text-seafoam-ink"><Sparkles size={20} aria-hidden="true"/></span>
-            <div className="min-w-0"><h2 className="font-semibold text-navy">Your workspace is ready.</h2><p className="mt-1 max-w-lg text-sm leading-relaxed text-muted-foreground">Add your first transaction to start building your financial picture. Charts and budgets will follow your activity.</p></div>
+            <div className="min-w-0"><h2 className="font-semibold text-navy">Your workspace is ready.</h2><p className="mt-1 text-sm leading-relaxed text-muted-foreground">Add your first transaction to start building your financial picture. Charts and budgets will follow your activity.</p></div>
           </div>
         </section>
       </StaggerItem>}

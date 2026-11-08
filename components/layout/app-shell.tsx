@@ -1,6 +1,6 @@
 'use client'
 
-import { House, Menu, Plus } from 'lucide-react'
+import { House, Menu } from 'lucide-react'
 import Link from 'next/link'
 import { useState, type ReactNode } from 'react'
 import { BrandMark, BrandWordmark } from '@/components/brand/brand-mark'
@@ -12,7 +12,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
-import { TransactionDialogProvider, useTransactionDialog } from '@/components/transactions/transaction-dialog-context'
+import { TransactionDialogProvider } from '@/components/transactions/transaction-dialog-context'
 import { AccountMenu } from './account-menu'
 import { SidebarNav } from './sidebar-nav'
 
@@ -39,7 +39,6 @@ function DesktopSidebar() {
 
 function MobileTopBar() {
   const [open, setOpen] = useState(false)
-  const { openCreate } = useTransactionDialog()
 
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-border bg-background/90 px-4 backdrop-blur-md lg:hidden">
@@ -70,19 +69,11 @@ function MobileTopBar() {
         </SheetContent>
       </Sheet>
 
-      <Link href="/workspace" aria-label="Centlyra overview" className="flex items-center gap-2">
+      <Link href="/workspace" aria-label="Centlyra overview" className="absolute left-1/2 flex -translate-x-1/2 items-center gap-2">
         <BrandMark />
         <span className="font-display text-2xl text-navy">Centlyra</span>
       </Link>
 
-      <Button
-        size="icon"
-        className="size-10 rounded-xl bg-navy text-ivory hover:bg-navy-soft"
-        onClick={() => openCreate()}
-      >
-        <Plus className="size-5" aria-hidden="true" />
-        <span className="sr-only">Add transaction</span>
-      </Button>
     </header>
   )
 }

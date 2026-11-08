@@ -51,7 +51,7 @@ export function AccountMenu() {
         <DropdownMenuTrigger
           render={
             <Button
-              variant="ghost"
+              variant="default"
               className="flex h-auto min-h-16 w-full items-center justify-start gap-3 rounded-2xl border border-white/10 bg-white/[0.045] px-3 py-3 text-left text-ivory hover:bg-white/10 hover:text-ivory focus-visible:ring-seafoam"
             />
           }
