@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowLeft, Menu, Plus } from 'lucide-react'
+import { House, Menu, Plus } from 'lucide-react'
 import Link from 'next/link'
 import { useState, type ReactNode } from 'react'
 import { BrandMark, BrandWordmark } from '@/components/brand/brand-mark'
@@ -28,8 +28,8 @@ function DesktopSidebar() {
       </Link>
       <SidebarNav indicatorId="desktop" />
       <div className="mt-auto space-y-2">
-        <Link href="/" className="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-ivory/60 transition hover:bg-white/5 hover:text-ivory">
-          <ArrowLeft className="size-4" aria-hidden="true" /> Centlyra home
+        <Link href="/" className="flex h-11 items-center gap-3 rounded-xl border border-white/10 bg-white/[0.045] px-3.5 text-sm font-medium text-ivory/85 transition-colors hover:bg-white/10 hover:text-ivory focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-seafoam">
+          <House className="size-[18px] text-seafoam" aria-hidden="true" /> Go to home
         </Link>
         <AccountMenu />
       </div>
@@ -62,8 +62,8 @@ function MobileTopBar() {
           </div>
           <SidebarNav indicatorId="mobile" onNavigate={() => setOpen(false)} />
           <div className="mt-auto space-y-2">
-            <Link href="/" onClick={() => setOpen(false)} className="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-ivory/70">
-              <ArrowLeft className="size-4" aria-hidden="true" /> Centlyra home
+            <Link href="/" onClick={() => setOpen(false)} className="flex h-11 items-center gap-3 rounded-xl border border-white/10 bg-white/[0.045] px-3.5 text-sm font-medium text-ivory/85 transition-colors hover:bg-white/10 hover:text-ivory focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-seafoam">
+              <House className="size-[18px] text-seafoam" aria-hidden="true" /> Go to home
             </Link>
             <AccountMenu />
           </div>

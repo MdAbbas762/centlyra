@@ -1,6 +1,6 @@
 'use client'
 
-import { Ellipsis, FolderOpen, Trash2 } from 'lucide-react'
+import { ChevronDown, FolderOpen, Settings2, Trash2 } from 'lucide-react'
 import { useState } from 'react'
 import { toast } from 'sonner'
 import {
@@ -26,9 +26,6 @@ import { createSampleData } from '@/lib/finance/seed'
 import { useAppDispatch } from '@/store/hooks'
 import { dataReset } from '@/store/actions'
 
-export const USER_NAME = 'Alex Morgan'
-export const USER_FIRST_NAME = 'Alex'
-
 export function AccountMenu() {
   const dispatch = useAppDispatch()
   const [confirmOpen, setConfirmOpen] = useState<'sample' | 'clear' | null>(null)
@@ -50,30 +47,24 @@ export function AccountMenu() {
 
   return (
     <>
-      <div className="flex items-center gap-3 rounded-2xl bg-white/5 p-3 ring-1 ring-white/10">
-        <span
-          aria-hidden="true"
-          className="flex size-10 shrink-0 items-center justify-center rounded-full bg-seafoam text-sm font-bold text-navy"
+      <DropdownMenu>
+        <DropdownMenuTrigger
+          render={
+            <Button
+              variant="ghost"
+              className="flex h-auto min-h-16 w-full items-center justify-start gap-3 rounded-2xl border border-white/10 bg-white/[0.045] px-3 py-3 text-left text-ivory hover:bg-white/10 hover:text-ivory focus-visible:ring-seafoam"
+            />
+          }
         >
-          AM
-        </span>
-        <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-semibold text-ivory">{USER_NAME}</p>
-          <p className="truncate text-xs text-ivory/60">Personal workspace</p>
-        </div>
-        <DropdownMenu>
-          <DropdownMenuTrigger
-            render={
-              <Button
-                variant="ghost"
-                size="icon"
-                className="size-8 rounded-lg text-ivory/70 hover:bg-white/10 hover:text-ivory"
-              />
-            }
-          >
-            <Ellipsis aria-hidden="true" />
-            <span className="sr-only">Workspace settings</span>
-          </DropdownMenuTrigger>
+          <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-seafoam/15 text-seafoam">
+            <Settings2 size={19} aria-hidden="true" />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-sm font-semibold">Workspace settings</span>
+            <span className="block text-xs text-ivory/60">Manage your workspace</span>
+          </span>
+          <ChevronDown size={16} className="shrink-0 text-ivory/60" aria-hidden="true" />
+        </DropdownMenuTrigger>
           <DropdownMenuContent side="top" align="end" className="w-64">
             <DropdownMenuGroup>
               <DropdownMenuLabel>Workspace</DropdownMenuLabel>
@@ -90,8 +81,7 @@ export function AccountMenu() {
               Your transactions and budgets are saved on this device.
             </p>
           </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
+      </DropdownMenu>
 
       <AlertDialog open={confirmOpen !== null} onOpenChange={(open) => { if (!open) setConfirmOpen(null) }}>
         <AlertDialogContent>

@@ -197,7 +197,7 @@ export function LandingPage() {
             </motion.h1>
             <motion.p className="lp-hero-lead" initial={{opacity:0,y:26}} animate={{opacity:1,y:0}} transition={{duration:.7,delay:.26}}>See where it goes, plan what comes next, and feel more in control of your everyday finances.</motion.p>
             <motion.div className="lp-hero-ctas" initial={{opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{duration:.7,delay:.38}}>
-              <Link href="/workspace" className="lp-button-primary">Open workspace <ArrowUpRight size={20}/></Link>
+              <Link href="/workspace" className="lp-button-primary">Go to dashboard <ArrowUpRight size={20}/></Link>
               <a href="#why-centlyra" className="lp-button-secondary">Discover Centlyra <ArrowRight size={18}/></a>
             </motion.div>
             <motion.div className="lp-hero-caption" initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1,delay:.7}}><span className="lp-caption-line"/> TRANSACTIONS <span className="lp-caption-dot"/> BUDGETS <span className="lp-caption-dot"/> INSIGHTS</motion.div>
