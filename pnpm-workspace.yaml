@@ -3,3 +3,7 @@ pmOnFail: ignore
 minimumReleaseAgeExclude:
   - '@next/*'
   - next
+
+# Pin the transitive react-is version used by Recharts to match React 19.2.4.
+overrides:
+  react-is: 19.2.4
