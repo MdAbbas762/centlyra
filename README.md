@@ -215,7 +215,7 @@ Additional reports show cumulative spending, category distribution, and changes 
 
 The landing page, Overview, and Analytics views adapt to narrower screens with dedicated mobile navigation and layouts.
 
-| Mobile Landing Page | Financial Workspace | Mobile Analytics |
+| Landing Page | Financial Workspace | Analytics Page |
 |:---:|:---:|:---:|
 | ![Centlyra mobile landing page](docs/screenshots/09-mobile-landing.png) | ![Centlyra mobile workspace](docs/screenshots/10-mobile-workspace.png) | ![Centlyra mobile analytics](docs/screenshots/11-mobile-analytics.png) |
 | Product introduction and entry to the workspace | Balance and monthly financial summary | Financial charts and spending trends |
